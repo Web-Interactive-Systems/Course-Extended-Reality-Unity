@@ -6,12 +6,30 @@ type: NoteCard
 ## Unit 1: Importing AR Foundation in a new AR Project
 
 1.  Locate the folder of your project: NameOfYourGameStarter
+
 2.  Create a copy of your project (just to keep your initial project clean, in case you want to start again)
+
 3.  Add and open your your project in Unity Hub
+
 4.  Import the package from the main menu by selecting Assets | Import Package | Custom Package
+
 5.  Locate the arf-samples.unitypackage file on your system and click Open
+
 6.  The Import Unity Package window will open. Click Import
+
 7.  Then, go to Player Settings using Edit | Project Settings | Player, select Configuration | Active Input Handling, and choose Both, … click Apply
+
+8.  Check the console you will see errors. Let’s fix them.
+
+9.  Install com.unity.xr.interaction.toolkit (Window | Package Manager | “+” | … by name)
+
+10. Assets/Scenes/ARKit/ARCollaborationData/AnchorInfoManager.cs(52,23): error CS0227: Unsafe code may only appear if compiling with /unsafe. Enable "Allow 'unsafe' code" in Player Settings to fix this error.
+
+    1.  Open Edit | Project Settings
+    2.  Select tab Player
+    3.  Find “Script compilation”; then, check “allow unsafe code”
+
+11. Now you should not have any errors in the console
 
 ## Unit 2: Running an AR Scene
 

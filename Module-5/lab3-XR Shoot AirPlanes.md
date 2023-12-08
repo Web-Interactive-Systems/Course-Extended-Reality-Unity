@@ -3,11 +3,11 @@ type: NoteCard
 ---
 
 # lab3-XR Shoot AirPlanes
-## Unit 2: Shooting AirPlanes
+## Unit 1: Shooting AirPlanes
 
 In the previous module, we created a gameObject ShooPlane which is part of the missile variant prefab. It’s time to create a script for this gamaObject.
 
-### Unit 2.1: Create a shooting script
+### Unit 1.1: Create a shooting script
 
 In the folder \_App/Scripts create a script called **Shoot**
 
@@ -17,7 +17,7 @@ Add a public property missile to the script
 public GameObject missile;
 ```
 
-### Unit 2.2: Adding shooting logic when the user touches the screen
+### Unit 1.2: Adding shooting logic when the user touches the screen
 
 Will use some Unity APIs
 
@@ -47,7 +47,7 @@ Here is an indented algorithm that we should implement (in Unity terms):
 
 Implement this algorithm in the Update method.
 
-## Unit 3: Building and deploying the app
+## Unit 2: Building and deploying the app
 
 Build and deploy the app.
 
@@ -60,7 +60,7 @@ You should be able to:
 
 The plane does not explode
 
-## Unit 4: Adding collision effects
+## Unit 3: Adding collision effects
 
 The prefab “Bullet\_Missle Variant” has
 
@@ -86,7 +86,7 @@ Destroy(other.transform.gameObject);
 Explosion();
 ```
 
-## Unit 5: Building and deploying the app
+## Unit 4: Building and deploying the app
 
 Build and deploy the app.
 
@@ -110,7 +110,7 @@ Build, deploy, and test the app.
 
 Notice that when a plane is destroyed it is not re-created again. Let’s do that.
 
-## Unit 6: Spawning new AirPlane after shooting it
+## Unit 5: Spawning new AirPlane after shooting it
 
 Open the Spawner script.
 
@@ -133,11 +133,11 @@ Call Spawner.Instance.spawnRedPlaneAfterTime(2.0f);
 
 Do the same work to spawn other planes.
 
-## Unit 7: Building and testing
+## Unit 6: Building and testing
 
 Build, deploy, and test the app.
 
-## Unit 8: Adding a debugging script LogToScreen
+## Unit 7: Adding a debugging script LogToScreen
 
 Analyze the following script to understand it:
 
@@ -191,10 +191,10 @@ public class LogToScreen : MonoBehaviour
 }
 ```
 
-Create an empty game object add LogToScreen to the scene
+Create an empty game object and add LogToScreen to the scene
 
 Attach the debug script to the gameObject LogToScreen
 
-## Unit 9: Building and testing
+## Unit 8: Building and testing
 
 Build, deploy, and test the app.

@@ -3,7 +3,19 @@ type: NoteCard
 ---
 
 # lab2-XR Spawn Missile and AirPlanes at Runtime
-## Unit 1: Placing objects on the plane
+## Unit 1: Creating a scene
+
+Create a scene that detects horizontal planes
+
+Add the script PlaceObjectsOnPlane to XR Origin
+
+Explore the script PlaceObjectsOnPlane in the Inspector and your code editor
+
+Add the script DisableTrackedVisuals to XR Origin
+
+Explore the script DisableTrackedVisuals in the Inspector and your code editor
+
+## Unit 2: Placing objects on the plane
 
 Our application can detect horizontal planes. That’s interesting but not that much useful.
 
@@ -33,7 +45,7 @@ Another attribute is “Can reposition”
 
 → Uncheck this attribute if you want the object to state still in its original place after the first tap.
 
-## Unit 2: Creating a spawner script
+## Unit 3: Creating a spawner script
 
 Create a script called Spawner inside the folder \_App/Scripts
 
@@ -51,7 +63,7 @@ Change the Awake callback function to assign `this` to `Instance (Instance = thi
 
 Add the script to the gameObject **Spawner** (select Spawner in the Hierarchy window then click on Add Component and search for the script Spawner OR drag and drop the script as a component into the Inspector window of the gameObject).
 
-## Unit 3: Building and testing the app
+## Unit 4: Building and testing the app
 
 Build and deploy the app.
 
@@ -74,7 +86,7 @@ Add the missing code so that the missile rotate
 
 You can build a test again to see the missile rotating
 
-## Unit 4: Adding a plane prefab to the scene
+## Unit 5: Adding a plane prefab to the scene
 
 In the **Spawner** script file, create a public property of type GameObject: redPlane
 
@@ -111,7 +123,7 @@ We make it public so that other scripts can access it.
 
 Other scripts can call public functions.
 
-### Unit 4.3: Setting the missile position
+### Unit 5.1: Setting the missile position
 
 Remember the Script “Place Objects One Plane”. When the user taps on the screen, we get the position of the hit (using raycast) and we instantiate the missile at the hit position.
 
@@ -123,7 +135,7 @@ Then, call `setMissilePosition`
 Spawner.Instance.setMissilePosition(hitPose.position);
 ```
 
-### Unit 4.4: Spawning plane
+### Unit 5.3: Spawning plane
 
 Now we have the position of the missile set up. We can now create a function that instantiates a plane. This function will take a plane game object and instantiate it on the top of the missile.
 
@@ -166,7 +178,7 @@ public void spawnRedPlane()
 }
 ```
 
-### Unit 4.5: Instantiating RedPlane
+### Unit 4.4: Instantiating RedPlane
 
 Ok. Now, we can call spawnRedPlane to instantiate RedPlane when we add the missile object to the scene.
 
@@ -178,7 +190,7 @@ Call the function spawnRedPlane
 Spawner.Instance.spawnRedPlane();
 ```
 
-### Unit 4.6: Building and testing the app
+### Unit 4.5: Building and testing the app
 
 Build and deploy the app.
 
@@ -209,10 +221,10 @@ Now the missile object should follow the target redPlane.
 
 You can build a test again to see the missile rotating.
 
-## Unit 5: Spawning greenPlane and rainbowPlane prefabs
+## Unit 6: Spawning greenPlane and rainbowPlane prefabs
 
-Repeate the same step as for redPlane to instantiate `greenPlane` and `rainbowPlane` prefabs in the scene
+Repeat the same step as for redPlane to instantiate `greenPlane` and `rainbowPlane` prefabs in the scene
 
-## Unit 6: Building and testing the app
+## Unit 7: Building and testing the app
 
 Build and deploy the app to see if everything is working as expected.
