@@ -1,5 +1,0 @@
----
-type: NoteCard
----
-
-# XR Comfort
